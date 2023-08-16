@@ -26,7 +26,8 @@ def finches_detail(request, finch_id):
   # instantiate FeedingForm to be rendered in detail.html
   feeding_form = FeedingForm()
   return render(request, 'finches/details.html', {
-    'finch': finch, 'feeding_form': feeding_form
+    'finch': finch, 'feeding_form': feeding_form,
+    'toys': toys_finch_doesnt_have
   })
 
 class FinchCreate(CreateView):
